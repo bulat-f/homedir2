@@ -23,6 +23,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'kchmck/vim-coffee-script'
 
 Bundle 'savonarola/vimfiles'
 Bundle 'ingydotnet/yaml-vim'
