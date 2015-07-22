@@ -26,7 +26,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kchmck/vim-coffee-script'
 
-Bundle 'savonarola/vimfiles'
+Bundle 'fatbulat/vimfiles'
 Bundle 'ingydotnet/yaml-vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
