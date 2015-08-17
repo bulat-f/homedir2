@@ -1,5 +1,5 @@
 [user]
-	email = fatbulat5@gmail.com
+    email = fatbulat5@gmail.com
     name = fatbulat
 [color]
     diff = auto
@@ -7,7 +7,7 @@
     branch = auto
     interactive = auto
 [diff]
-	renamelimit = 0
+    renamelimit = 0
 [merge]
   summary = true
 [alias]
