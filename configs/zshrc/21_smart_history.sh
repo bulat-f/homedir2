@@ -1,27 +1,25 @@
+setopt appendhistory
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
 
-# this one is very nice:
-# cursor up/down look for a command that started like the one starting on the command line
-function history-search-end {
-    integer ocursor=$CURSOR
+setopt INC_APPEND_HISTORY
 
-    if [[ $LASTWIDGET = history-beginning-search-*-end ]]; then
-      # Last widget called set $hbs_pos.
-      CURSOR=$hbs_pos
-    else
-      hbs_pos=$CURSOR
-    fi
+bindkey '^[OA' history-beginning-search-backward
+bindkey '^[OB' history-beginning-search-forward
 
-    if zle .${WIDGET%-end}; then
-      # success, go to end of line
-      zle .end-of-line
-    else
-      # failure, restore position
-      CURSOR=$ocursor
-      return 1
-    fi
-}
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
+setopt autocd
 
-bindkey -e "${key[Up]}"  history-beginning-search-backward-end #cursor up
-bindkey -e "${key[Down]}" history-beginning-search-forward-end  #cursor down
+autoload -Uz compinit
+compinit
+
+setopt extendedglob nomatch notify
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' use-compctl false
+zstyle :compinstall filename '/home/zsh/.zshrc'
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+setopt correctall
