@@ -7,7 +7,7 @@ if [ -e "$tmprepo" ]
 then
     rm -Rf "$tmprepo"
 fi
-git clone git://github.com/fatbulat/homedir2.git "$tmprepo"
+git clone git://github.com/bulat-f/homedir2.git "$tmprepo"
 cd "$tmprepo"
 "$tmprepo"/install.pl "$@"
 rm -Rf "$tmprepo"

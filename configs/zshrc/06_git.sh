@@ -1,7 +1,7 @@
 if [[ -x `which git 2> /dev/null` ]]; then
     
     function in_mnt_dir() {
-        pwd | grep '/home/fatbulat/mnt'
+        pwd | grep '/home/bulat/mnt'
     }
 
     function git-branch-name () {
